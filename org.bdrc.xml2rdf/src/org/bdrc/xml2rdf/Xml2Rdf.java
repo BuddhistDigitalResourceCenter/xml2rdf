@@ -60,7 +60,7 @@ public class Xml2Rdf {
 			if (inDoc.endsWith(".xml")) {
 				System.err.println("Converting " + inDoc);
 				File inf = new File(inDocDir + inDoc);
-				XML2OWLMapper generator = new XML2OWLMapper(inf, mapping);
+				XML2OWLMapper generator = new XML2OWLMapper(inf, inDoc.replace(".xml", ""), mapping);
 				generator.convertXML2OWL();
 
 				// Serialize the RDF data model to a file.
